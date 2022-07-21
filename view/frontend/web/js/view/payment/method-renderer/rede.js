@@ -503,6 +503,11 @@ define([
                 this.debitCard(false);
             },
 
+            validate: function () {
+                var $form = $('#' + this.getCode() + '-form');
+                return $form.validation() && $form.validation('isValid');
+            },
+
             /**
              * @override
              */
